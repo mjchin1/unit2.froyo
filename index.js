@@ -5,14 +5,14 @@ const userInputString = prompt(
 
 let froyoChoices = userInputString.split(",");
 
-let vanillaOrders = [] 
-let coffeeOrders = []
-let strawberryOrders = [] 
-let otherFlavorOrders = []
-const froyoOrders = {}
+let vanillaOrders = [];  
+let coffeeOrders = []; 
+let strawberryOrders = [];  
+let otherFlavorOrders = []; 
+const froyoOrders = {}; 
 function createFroyoTable(froyoChoices) {
     for(let i = 0; i <froyoChoices.length; i ++) {
-        let flavor = froyoChoices[i]
+        let flavor = froyoChoices[i]; 
         if(flavor === "vanilla") {
             vanillaOrders.push(flavor);
         } else if(flavor === "coffee") {
@@ -24,11 +24,11 @@ function createFroyoTable(froyoChoices) {
         }
     } 
     
-    froyoOrders.vanilla = vanillaOrders.length;
-    froyoOrders.coffee = coffeeOrders.length;
-    froyoOrders.strawberry = strawberryOrders.length;
-    froyoOrders.other = otherFlavorOrders.length;
+    froyoOrders.Vanilla = vanillaOrders.length;
+    froyoOrders.Coffee = coffeeOrders.length;
+    froyoOrders.Strawberry = strawberryOrders.length;
+    froyoOrders.Other = otherFlavorOrders.length;
 
     return froyoOrders;
 }
-console.table(createFroyoTable(froyoChoices))
+console.table(createFroyoTable(froyoChoices)); 
